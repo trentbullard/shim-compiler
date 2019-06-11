@@ -1,29 +1,626 @@
 {
   "pages": {
-    "home_test": {
+    "home": {
       "main_scaffold": {
-        "main_module_header": {
-          "locals": {
-            "module_name": "Home"
+        "locals": {
+          "motivate_link_class": "",
+          "home_link_class": "current-selection"
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Home"
+            }
           }
         },
         "home_body": {}
       }
     },
-    "motivate_overview_test": {
-      "main_scaffold": {}
+    "motivate_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "motivate_overview_title": {},
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "active",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "motivate_overview_body": {}
+      }
     },
-    "health_coaching_overview_test": {
-      "main_scaffold": {}
+    "health_coaching_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Health Coaching"
+            }
+          },
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "active",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "motivate_body": {
+          "sidenav_left": {
+            "sidebar_links": [
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Overview",
+                    "link_class": "current-selection",
+                    "link_href": "health_coaching_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Schedule",
+                    "link_class": "",
+                    "link_href": "scheduling_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Message Center",
+                    "link_class": "",
+                    "link_href": "messaging_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Wellness Tracking",
+                    "link_class": "",
+                    "link_href": "wellness_tracking_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Assessment",
+                    "link_class": "",
+                    "link_href": "assessment_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Biometric Results",
+                    "link_class": "",
+                    "link_href": "biometric_results_overview.htm"
+                  }
+                }
+              }
+            ],
+            "sidebar_goal": {},
+            "sidebar_prescription": {}
+          },
+          "sidenav_right": {
+            "sidebar_logo": {},
+            "sidebar_hr": {},
+            "sidebar_events": {}
+          },
+          "motivate_feature_center_content": {
+            "assessment_answers_highlight": {},
+            "biometric_results_highlight": {},
+            "goals_highlight": {}
+          }
+        }
+      }
     },
-    "wellness_programs_overview_test": {
-      "main_scaffold": {}
+    "wellness_programs_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Health Coaching"
+            }
+          },
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "active",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "motivate_body": {
+          "sidenav_left": {
+            "sidebar_links": [
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Overview",
+                    "link_class": "current-selection",
+                    "link_href": "wellness_programs_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Tobacco Cessation",
+                    "link_class": "",
+                    "link_href": "tobacco_cessation_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Weight Management",
+                    "link_class": "",
+                    "link_href": "weight_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Stress Management",
+                    "link_class": "",
+                    "link_href": "stress_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Nutrition",
+                    "link_class": "",
+                    "link_href": "nutrition_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Fitness",
+                    "link_class": "",
+                    "link_href": "fitness_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Wellbeing",
+                    "link_class": "",
+                    "link_href": "wellbeing_category.htm"
+                  }
+                }
+              }
+            ]
+          },
+          "sidenav_right": {
+            "sidebar_logo": {},
+            "sidebar_hr": {},
+            "sidebar_challenges": {}
+          },
+          "motivate_feature_center_content": {
+            "programs_highlight": {},
+            "challenges_highlight": {},
+            "personal_plans_highlight": {}
+          }
+        }
+      }
     },
-    "learn_overview_test": {
-      "main_scaffold": {}
+    "learn_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Health Coaching"
+            }
+          },
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "active",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "motivate_body": {
+          "sidenav_left": {
+            "sidebar_links": [
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Overview",
+                    "link_class": "current-selection",
+                    "link_href": "wellness_programs_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Tobacco Cessation",
+                    "link_class": "",
+                    "link_href": "tobacco_cessation_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Weight Management",
+                    "link_class": "",
+                    "link_href": "weight_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Stress Management",
+                    "link_class": "",
+                    "link_href": "stress_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Nutrition",
+                    "link_class": "",
+                    "link_href": "nutrition_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Fitness",
+                    "link_class": "",
+                    "link_href": "fitness_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Wellbeing",
+                    "link_class": "",
+                    "link_href": "wellbeing_category.htm"
+                  }
+                }
+              }
+            ]
+          },
+          "sidenav_right": {
+            "sidebar_logo": {},
+            "sidebar_hr": {}
+          },
+          "motivate_feature_center_content": {}
+        }
+      }
     },
-    "self_reporting_overview_test": {
-      "main_scaffold": {}
+    "self_reporting_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Health Coaching"
+            }
+          },
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "active",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "motivate_body": {
+          "sidenav_left": {
+            "sidebar_links": [
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Overview",
+                    "link_class": "current-selection",
+                    "link_href": "wellness_programs_overview.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Tobacco Cessation",
+                    "link_class": "",
+                    "link_href": "tobacco_cessation_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Weight Management",
+                    "link_class": "",
+                    "link_href": "weight_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Stress Management",
+                    "link_class": "",
+                    "link_href": "stress_management_details.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Nutrition",
+                    "link_class": "",
+                    "link_href": "nutrition_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Fitness",
+                    "link_class": "",
+                    "link_href": "fitness_category.htm"
+                  }
+                }
+              },
+              {
+                "sidebar_link": {
+                  "locals": {
+                    "link_text": "Wellbeing",
+                    "link_class": "",
+                    "link_href": "wellbeing_category.htm"
+                  }
+                }
+              }
+            ]
+          },
+          "sidenav_right": {
+            "sidebar_logo": {},
+            "sidebar_hr": {}
+          },
+          "motivate_feature_center_content": {}
+        }
+      }
     }
   }
 }
