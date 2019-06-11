@@ -1281,61 +1281,7 @@
                   "locals": {
                     "link_text": "Overview",
                     "link_class": "current-selection",
-                    "link_href": "wellness_programs_overview.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Tobacco Cessation",
-                    "link_class": "",
-                    "link_href": "tobacco_cessation_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Weight Management",
-                    "link_class": "",
-                    "link_href": "weight_management_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Stress Management",
-                    "link_class": "",
-                    "link_href": "stress_management_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Nutrition",
-                    "link_class": "",
-                    "link_href": "nutrition_category.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Fitness",
-                    "link_class": "",
-                    "link_href": "fitness_category.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Wellbeing",
-                    "link_class": "",
-                    "link_href": "wellbeing_category.htm"
+                    "link_href": "learn_overview.htm"
                   }
                 }
               }
@@ -1345,7 +1291,13 @@
             "sidebar_logo": {},
             "sidebar_hr": {}
           },
-          "motivate_feature_center_content": {}
+          "motivate_feature_center_content": {
+            "center_content_blah": {
+              "locals": {
+                "feature_content_title": "Learn Feature Overview"
+              }
+            }
+          }
         }
       }
     },
@@ -1417,61 +1369,7 @@
                   "locals": {
                     "link_text": "Overview",
                     "link_class": "current-selection",
-                    "link_href": "wellness_programs_overview.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Tobacco Cessation",
-                    "link_class": "",
-                    "link_href": "tobacco_cessation_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Weight Management",
-                    "link_class": "",
-                    "link_href": "weight_management_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Stress Management",
-                    "link_class": "",
-                    "link_href": "stress_management_details.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Nutrition",
-                    "link_class": "",
-                    "link_href": "nutrition_category.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Fitness",
-                    "link_class": "",
-                    "link_href": "fitness_category.htm"
-                  }
-                }
-              },
-              {
-                "sidebar_link": {
-                  "locals": {
-                    "link_text": "Wellbeing",
-                    "link_class": "",
-                    "link_href": "wellbeing_category.htm"
+                    "link_href": "self_reporting_overview.htm"
                   }
                 }
               }
@@ -1481,7 +1379,13 @@
             "sidebar_logo": {},
             "sidebar_hr": {}
           },
-          "motivate_feature_center_content": {}
+          "motivate_feature_center_content": {
+            "center_content_blah": {
+              "locals": {
+                "feature_content_title": "Self Reporting Feature Overview"
+              }
+            }
+          }
         }
       }
     }
