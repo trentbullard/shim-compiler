@@ -678,6 +678,80 @@
         }
       }
     },
+    "goals_overview": {
+      "main_scaffold": {
+        "locals": {
+          "motivate_link_class": "current-selection",
+          "home_link_class": ""
+        },
+        "module_header": {
+          "module_title": {
+            "locals": {
+              "module_name": "Health Coaching"
+            }
+          },
+          "module_nav": [
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Overview",
+                  "link_class": "",
+                  "link_href": "motivate_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Health Coaching",
+                  "link_class": "active",
+                  "link_href": "health_coaching_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Wellness Programs",
+                  "link_class": "",
+                  "link_href": "wellness_programs_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Learn",
+                  "link_class": "",
+                  "link_href": "learn_overview.htm"
+                }
+              }
+            },
+            {
+              "module_nav_button": {
+                "locals": {
+                  "link_text": "Self-Reporting",
+                  "link_class": "",
+                  "link_href": "self_reporting_overview.htm"
+                }
+              }
+            }
+          ]
+        },
+        "health_coaching_scaffold": {
+          "locals": {
+            "goals_link_active": "current-selection"
+          },
+          "motivate_feature_center_content": {
+            "center_content_blah": {
+              "locals": {
+                "feature_content_title": "Goals Overview"
+              }
+            }
+          }
+        }
+      }
+    },
     "wellness_programs_overview": {
       "main_scaffold": {
         "locals": {

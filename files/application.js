@@ -47730,3 +47730,17 @@ function poll_report_status(report_url, run_count) {
     })
   }, 5000);
 }
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+		document.getElementById("toTopBtn").style.display="block";
+	}else{
+		document.getElementById("toTopBtn").style.display="none";
+	}
+}
+
+function topFunction(){
+	document.body.scrollTop=0;
+	document.documentElement.scrollTop=0;
+}
