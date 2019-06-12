@@ -25,6 +25,8 @@ def build_page(content):
                     if re.findall(special, file_string):
                         file_string = file_string.replace(
                             f'~~ {local_key} ~~', local_value)
+            file_string = re.sub(
+                r'~~ .* ~~', "", file_string)
     return file_string
 
 
@@ -33,4 +35,5 @@ pages = layout['pages']
 
 for file_name, page_content in pages.items():
     with open(f'{file_name}.htm', 'w') as file:
+        print(f'building page: {file_name}')
         file.write(build_page(page_content))
