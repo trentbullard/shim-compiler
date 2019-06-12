@@ -373,11 +373,12 @@
             "schedule_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
+            "scheduling_filter_form": {
               "locals": {
-                "feature_content_title": "Scheduling Overview"
+                "feature_content_title": "Schedule a health coaching appointment"
               }
-            }
+            },
+            "scheduling_calendar": {}
           }
         }
       }
