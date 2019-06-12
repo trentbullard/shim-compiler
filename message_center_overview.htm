@@ -38,45 +38,6 @@
 
     <link href="files/fullcalendar/core/main.min.css" rel="stylesheet" />
     <link href="files/fullcalendar/daygrid/main.min.css" rel="stylesheet" />
-
-    <script src="files/fullcalendar/core/main.min.js"></script>
-    <script src="files/fullcalendar/interaction/main.min.js"></script>
-    <script src="files/fullcalendar/daygrid/main.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var calendarEl = document.getElementById("calendar");
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: ["dayGrid", "interaction"],
-          defaultView: "dayGridMonth",
-          selectable: true,
-          dateClick: function(info) {
-            var timeOfDay = document.getElementById("timeOfDaySelector").value;
-            var gender = document.getElementById("genderSelector").value;
-            if (gender == "Any") {
-              gender = "any";
-            }
-            if (gender == "Male") {
-              gender = "a male";
-            }
-            if (gender == "Female") {
-              gender = "a female";
-            }
-            alert(
-              "You selected " +
-                info.dateStr +
-                " for time: " +
-                timeOfDay +
-                ", with " +
-                gender +
-                " health coach."
-            );
-          }
-        });
-
-        calendar.render();
-      });
-    </script>
   </head>
   <body data-gr-c-s-loaded="true">
     <button
@@ -336,11 +297,161 @@
 <div class="feature-content">
   <div class="row">
     <div class="col-md-12">
-      <div class="row">
-  <div class="col-md-12">
-    <h2>Message Center</h2>
+      <h2>Message Center</h2>
+<hr />
+<div class="mov-tile auto-height">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist" id="tablist">
+        <li role="presentation" class="active" data-tab="#inbox-pane">
+          <button class="btn btn-link">Inbox</button>
+        </li>
+        <li role="presentation" data-tab="#new-pane">
+          <button class="btn btn-link">New</button>
+        </li>
+        <li role="presentation" data-tab="#sent-pane">
+          <button class="btn btn-link">Sent</button>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="inbox-pane">
+          <table class="table table-hover table-responsive" id="inbox">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Sender</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="success" data-message="#message1">
+                <td>Step Challenge Reminder - Important!</td>
+                <td>Health Coach</td>
+                <td>06/01/2019 7:50 AM</td>
+                <td>
+                  <button class="btn btn-danger">
+                    <i class="fa fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr class="success" data-message="#message2">
+                <td>Nutrition plan requested information</td>
+                <td>Health Coach</td>
+                <td>05/30/2019 9:50 AM</td>
+                <td>
+                  <button class="btn btn-danger">
+                    <i class="fa fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr data-message="#message3">
+                <td>Upcoming program deadline</td>
+                <td>Organization Administrator</td>
+                <td>05/28/2019 8:50 AM</td>
+                <td>
+                  <button class="btn btn-danger">
+                    <i class="fa fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="new-pane">
+          new
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sent-pane">
+          sent
+        </div>
+      </div>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="message1" hidden>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel=title">
+                Step Challenge Reminder - Important!
+              </h4>
+            </div>
+            <div class="panel-body">
+              <b>Hi, Trent!</b><br />
+              Dont forget to get your 7,000 step average this week! Currently,
+              you are averaging 5,700 steps per day. You can do this!
+              <br />
+              <br />
+              - Your health coaching team
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="message2" hidden>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel=title">
+                Nutrition plan requested information
+              </h4>
+            </div>
+            <div class="panel-body">
+              <b>Hi, Trent!</b>
+              <br />
+              Here is that information you requested on your last
+              health-coaching call.
+              <br />
+              <br />
+              - Your health coaching team
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="message3" hidden>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel=title">
+                Upcoming program deadline
+              </h4>
+            </div>
+            <div class="panel-body">
+              <b>Hi, Trent!</b>
+              <br />
+              The third interval of your Tobacco Cessation program is coming up
+              soon. If you have any questions or concerns, don't hesitate to
+              request an appointment with a health coach. Keep up the great
+              work!
+              <br />
+              <br />
+              - Your health coaching team
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<script>
+  $("#inbox tr").click(function() {
+    var messages = ["#message1", "#message2", "#message3"];
+    $(this).removeClass("success");
+    var current_message = $(this).data("message");
+    for (i = 0; i < messages.length; i++) {
+      if (current_message !== messages[i]) {
+        $(messages[i]).hide();
+      }
+    }
+    $($(this).data("message")).show();
+    $("#inbox tr").removeClass("info");
+    $($(this).addClass("info"));
+  });
+
+  $("#tablist li").click(function() {
+    $("div.tab-content div.tab-pane").hide();
+    $(".nav-tabs li").removeClass("active");
+    $(this).addClass("active");
+    $("#inbox tr").removeClass("info");
+    $($(this).data("tab")).show();
+  });
+</script>
 
     </div>
   </div>

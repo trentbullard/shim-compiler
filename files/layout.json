@@ -448,7 +448,7 @@
             "message_center_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
+            "message_center_content": {
               "locals": {
                 "feature_content_title": "Message Center"
               }

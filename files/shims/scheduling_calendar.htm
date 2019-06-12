@@ -1,1 +1,39 @@
+<script src="files/fullcalendar/core/main.min.js"></script>
+<script src="files/fullcalendar/interaction/main.min.js"></script>
+<script src="files/fullcalendar/daygrid/main.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var calendarEl = document.getElementById("calendar");
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: ["dayGrid", "interaction"],
+      defaultView: "dayGridMonth",
+      selectable: true,
+      dateClick: function(info) {
+        var timeOfDay = document.getElementById("timeOfDaySelector").value;
+        var gender = document.getElementById("genderSelector").value;
+        if (gender == "Any") {
+          gender = "any";
+        }
+        if (gender == "Male") {
+          gender = "a male";
+        }
+        if (gender == "Female") {
+          gender = "a female";
+        }
+        alert(
+          "You selected " +
+            info.dateStr +
+            " for time: " +
+            timeOfDay +
+            ", with " +
+            gender +
+            " health coach."
+        );
+      }
+    });
+
+    calendar.render();
+  });
+</script>
 <div id="calendar" style="margin-top: 50px;"></div>

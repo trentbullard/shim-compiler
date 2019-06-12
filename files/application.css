@@ -13212,3 +13212,16 @@ header.engage-header #nav ul li a.current-selection {
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
 }
+
+.btn-link:focus, .btn-link:hover, .btn-link:active:focus, .btn-link:active:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+.nav-tabs>li.active>button, .nav-tabs>li.active>button:focus, .nav-tabs>li.active>button:hover {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
