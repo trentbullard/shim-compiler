@@ -522,11 +522,7 @@
             "wellness_tracking_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
-              "locals": {
-                "feature_content_title": "Wellness Tracking Overview"
-              }
-            }
+            "wellness_tracking_content": {}
           }
         }
       }
