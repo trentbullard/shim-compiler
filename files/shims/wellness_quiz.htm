@@ -1,10 +1,65 @@
 <button class="btn btn-primary" id="wellnessQuizBtn" title="Daily Check-In">
   Daily Check-In
 </button>
-<div class="modal-dialog modal-sm" id="wellnessQuizModalDialog">
+<div class="modal-dialog" id="wellnessQuizModalDialog">
   <div class="modal-content">
     <div class="modal-body">
-      wellness quiz
+      <h4>How do you feel compared to yesterday?</h4>
+      <div class="radio-inline">
+        <label class="mood-emoji">
+          <input
+            type="radio"
+            name="moodRadios"
+            id="moodGood"
+            value="mood_good"
+          />&#128512;
+        </label>
+      </div>
+      <div class="radio-inline">
+        <label class="mood-emoji">
+          <input
+            type="radio"
+            name="moodRadios"
+            id="moodNeutral"
+            value="mood_neutral"
+          />&#128528;
+        </label>
+      </div>
+      <div class="radio-inline">
+        <label class="mood-emoji">
+          <input
+            type="radio"
+            name="moodRadios"
+            id="moodBad"
+            value="mood_bad"
+          />&#128530;
+        </label>
+      </div>
+      <h4>Today I was active for</h4>
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="activeHours">
+            <input type="text" class="form-control" id="activeHoursTxt" />
+            hours
+          </label>
+        </div>
+      </div>
+      <h4>Today I ate</h4>
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="healthyCalories">
+            <input type="text" class="form-control" id="healthyCaloriesTxt" />
+            healthy calories
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="unhealthyCalories">
+            <input type="text" class="form-control" id="unhealthyCaloriesTxt" />
+            unhealthy calories
+          </label>
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <button
@@ -63,6 +118,15 @@
   });
 
   $("#wellnessQuizSubmitBtn").click(function() {
-    $("#wellnessQuizModalDialog").hide();
+    $("div.modal-dialog div.modal-content div.modal-footer").remove();
+    $("div.modal-dialog div.modal-content div.modal-body").html(
+      '<div class="alert alert-success">Thanks! Check <a href="wellness_tracking_overview.htm">Wellness Tracking</a> for your progress!</div>'
+    );
+    $("#wellnessQuizModalDialog")
+      .delay(3000)
+      .fadeOut({
+        duration: 1500,
+        easing: "easeOutSine"
+      });
   });
 </script>

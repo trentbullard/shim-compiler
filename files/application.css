@@ -13227,6 +13227,7 @@ header.engage-header #nav ul li a.current-selection {
   left: 30px; /* Place the button 30px from the right */
   margin: 0;
   z-index: 99; /* Make sure it does not overlap */
+  width: auto;
 }
 
 .btn-link:focus, .btn-link:hover, .btn-link:active:focus, .btn-link:active:hover {
@@ -13240,4 +13241,8 @@ header.engage-header #nav ul li a.current-selection {
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
+}
+
+.mood-emoji {
+  font-size: 30px;
 }
