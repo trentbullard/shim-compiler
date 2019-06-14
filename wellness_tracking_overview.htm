@@ -342,6 +342,13 @@
     date.setDate(date.getDate() - i);
     labels.push(`${date.getMonth() + 1}/${date.getDate()}`);
 
+    if (i % 13 == 0) {
+      fitnessData.push(null);
+      nutritionDataHealthy.push(null);
+      nutritionDataUnhealthy.push(null);
+      moodData.push(null);
+    }
+
     var rand = 1 - i / 30;
 
     fitnessRand = Math.round(
@@ -352,12 +359,12 @@
     }
     fitnessData.push(fitnessRand);
 
-    nutritionRandHealthy = 2000 * rand + randInt(-500, 500);
+    nutritionRandHealthy = Math.round(2000 * rand + randInt(-500, 500));
     if (nutritionRandHealthy < 0) {
       nutritionRandHealthy = 0;
     }
     nutritionDataHealthy.push(nutritionRandHealthy);
-    nutritionRandUnhealthy = 2200 * (1 - rand) + randInt(-500, 500);
+    nutritionRandUnhealthy = Math.round(2200 * (1 - rand) + randInt(-500, 500));
     if (nutritionRandUnhealthy < 0) {
       nutritionRandUnhealthy = 0;
     }
@@ -379,7 +386,6 @@
         nutritionRandHealthy / 2000 -
         nutritionRandUnhealthy / 2000) /
       3;
-    console.log("moodIndex: ", moodIndex);
     if (moodIndex < 0) {
       mood -= 1;
       moodData.push(mood);
