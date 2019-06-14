@@ -819,10 +819,57 @@
             "goals_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
+            "goals_content": {
               "locals": {
                 "feature_content_title": "Goals Overview"
-              }
+              },
+              "highlight_cards": [
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Water Goal",
+                      "link_href": "goals_overview.htm#water-goal"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/goal_1.png",
+                        "alt_text": "water-goal-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Food Goal",
+                      "link_href": "goals_overview.htm#food-goal"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/goal_2.png",
+                        "alt_text": "food-goal-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Activity Goal",
+                      "link_href": "goals_overview.htm#activity-goal"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/goal_3.png",
+                        "alt_text": "activity-goal-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                }
+              ]
             }
           }
         }
