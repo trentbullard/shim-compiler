@@ -593,11 +593,12 @@
             "assessment_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
+            "assessment_details_content": {
               "locals": {
-                "feature_content_title": "Health Quality Assessment Details"
+                "feature_content_title": "Your Latest Health Quality Assessment Responses"
               }
-            }
+            },
+            "assessment_modal": {}
           }
         }
       }

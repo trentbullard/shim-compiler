@@ -5400,7 +5400,8 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: rgb(0,0,0);
+  background-color: rgb(0,0,0,.4);
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -13210,14 +13211,12 @@ header.engage-header #nav ul li a.current-selection {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
 }
 
 #wellnessQuizBtn {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   left: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
 }
 
 #wellnessQuizModalDialog {
@@ -13226,7 +13225,6 @@ header.engage-header #nav ul li a.current-selection {
   bottom: 20px; /* Place the button at the bottom of the page */
   left: 30px; /* Place the button 30px from the right */
   margin: 0;
-  z-index: 99; /* Make sure it does not overlap */
   width: auto;
 }
 
@@ -13245,4 +13243,8 @@ header.engage-header #nav ul li a.current-selection {
 
 .mood-emoji {
   font-size: 30px;
+}
+
+.assessment-details-content {
+  display: none;
 }

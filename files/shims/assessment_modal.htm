@@ -1,0 +1,295 @@
+<div class="modal-backdrop">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        Take this assessment to gain access to the Health Coaching Feature
+      </div>
+      <div class="modal-body">
+        <h4>My job makes me feel:</h4>
+        <div class="radio-inline">
+          <label class="mood-emoji">
+            <input
+              type="radio"
+              name="moodRadios"
+              id="modalMoodGood"
+              value="mood_good"
+            />&#128512;
+          </label>
+        </div>
+        <div class="radio-inline">
+          <label class="mood-emoji">
+            <input
+              type="radio"
+              name="moodRadios"
+              id="modalMoodNeutral"
+              value="mood_neutral"
+            />&#128528;
+          </label>
+        </div>
+        <div class="radio-inline">
+          <label class="mood-emoji">
+            <input
+              type="radio"
+              name="moodRadios"
+              id="modalMoodBad"
+              value="mood_bad"
+            />&#128530;
+          </label>
+        </div>
+        <h4>On most days, I'm active for</h4>
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="activeHours">
+              <input
+                type="text"
+                class="form-control"
+                id="modalActiveHoursTxt"
+              />
+              hours
+            </label>
+          </div>
+        </div>
+        <h4>On most days, I eat</h4>
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="healthyCalories">
+              <input
+                type="text"
+                class="form-control"
+                id="modalHealthyCaloriesTxt"
+              />
+              healthy calories
+            </label>
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="unhealthyCalories">
+              <input
+                type="text"
+                class="form-control"
+                id="modalUnhealthyCaloriesTxt"
+              />
+              unhealthy calories
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-link"
+          data-dismiss="modal"
+          id="assessmentCancelBtn"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="assessmentSubmitBtn"
+          disabled
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="assessment-details-content" style="display: none;">
+  <h4>My job makes me feel:</h4>
+  <div class="radio-inline">
+    <label class="mood-emoji">
+      <input
+        type="radio"
+        name="moodRadios"
+        id="moodGood"
+        value="mood_good"
+        checked
+        disabled
+      />&#128512;
+    </label>
+  </div>
+  <div class="radio-inline">
+    <label class="mood-emoji">
+      <input
+        type="radio"
+        name="moodRadios"
+        id="moodNeutral"
+        value="mood_neutral"
+        disabled
+      />&#128528;
+    </label>
+  </div>
+  <div class="radio-inline">
+    <label class="mood-emoji">
+      <input
+        type="radio"
+        name="moodRadios"
+        id="moodBad"
+        value="mood_bad"
+        disabled
+      />&#128530;
+    </label>
+  </div>
+  <h4>On most days, I'm active for</h4>
+  <div class="form-inline">
+    <div class="form-group">
+      <label for="activeHours">
+        <input
+          type="text"
+          class="form-control"
+          id="activeHoursTxt"
+          placeholder="3"
+          readonly
+        />
+        hours
+      </label>
+    </div>
+  </div>
+  <h4>On most days, I eat</h4>
+  <div class="form-inline">
+    <div class="form-group">
+      <label for="healthyCalories">
+        <input
+          type="text"
+          class="form-control"
+          id="healthyCaloriesTxt"
+          placeholder="1800"
+          readonly
+        />
+        healthy calories
+      </label>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="unhealthyCalories">
+        <input
+          type="text"
+          class="form-control"
+          id="unhealthyCaloriesTxt"
+          placeholder="600"
+          readonly
+        />
+        unhealthy calories
+      </label>
+    </div>
+  </div>
+  <br />
+  <button type="button" class="btn btn-primary" id="assessmentRequestBtn">
+    Request New HQA
+  </button>
+</div>
+
+<script>
+  var moodSelected = false;
+  var goodMoodSelected = false;
+  var neutralMoodSelected = false;
+  var badMoodSelected = false;
+  var activeHoursEntered = false;
+  var healthyCaloriesEntered = false;
+  var unhealthyCaloriesEntered = false;
+
+  $("html, body").css({
+    overflow: "hidden",
+    height: "100%"
+  });
+
+  $("#assessmentCancelBtn, #assessmentSubmitBtn").click(function() {
+    $("html, body").css({
+      overflow: "auto",
+      height: "auto"
+    });
+    $(".modal-backdrop").hide();
+    $("#assessment-details-form").css({
+      width: "auto"
+    });
+    $(".assessment-details-content").show();
+  });
+
+  $("#assessmentSubmitBtn").click(function() {
+    $("html, body").css({
+      overflow: "auto",
+      height: "auto"
+    });
+    $(".modal-backdrop").hide();
+    $("#assessment-details-form").css({
+      width: "auto"
+    });
+    $(".assessment-details-content").show();
+    $("#activeHoursTxt").val($("#modalActiveHoursTxt").val());
+    $("#healthyCaloriesTxt").val($("#modalHealthyCaloriesTxt").val());
+    $("#unhealthyCaloriesTxt").val($("#modalUnhealthyCaloriesTxt").val());
+    if ($("#modalMoodGood").prop("checked")) {
+      $("#moodGood").prop("checked", true);
+    } else if ($("#modalMoodNeutral").prop("checked")) {
+      $("#moodNeutral").prop("checked", true);
+    } else if ($("#modalMoodBad").prop("checked")) {
+      $("#moodBad").prop("checked", true);
+    }
+  });
+
+  $("#assessmentRequestBtn").click(function() {
+    if (goodMoodSelected) {
+      $("#modalMoodGood").prop("checked", true);
+    } else if (neutralMoodSelected) {
+      $("#modalMoodNeutral").prop("checked", true);
+    } else if (badMoodSelected) {
+      $("#modalMoodBad").prop("checked", true);
+    }
+    $(".assessment-details-content").hide();
+    $(".modal-backdrop").show();
+    $("html, body").css({
+      overflow: "hidden",
+      height: "100%"
+    });
+  });
+
+  $("#modalMoodGood").change(function() {
+    moodSelected = true;
+    goodMoodSelected = true;
+    badMoodSelected = false;
+    neutralMoodSelected = false;
+    updateSubmitButton();
+  });
+  $("#modalMoodNeutral").change(function() {
+    moodSelected = true;
+    neutralMoodSelected = true;
+    badMoodSelected = false;
+    goodMoodSelected = false;
+    updateSubmitButton();
+  });
+  $("#modalMoodBad").change(function() {
+    moodSelected = true;
+    badMoodSelected = true;
+    neutralMoodSelected = false;
+    goodMoodSelected = false;
+    updateSubmitButton();
+  });
+
+  $("#modalActiveHoursTxt").change(function() {
+    activeHoursEntered = true;
+    updateSubmitButton();
+  });
+
+  $("#modalHealthyCaloriesTxt").change(function() {
+    healthyCaloriesEntered = true;
+    updateSubmitButton();
+  });
+  $("#modalUnhealthyCaloriesTxt").change(function() {
+    unhealthyCaloriesEntered = true;
+    updateSubmitButton();
+  });
+
+  function updateSubmitButton() {
+    if (
+      !moodSelected ||
+      !activeHoursEntered ||
+      !healthyCaloriesEntered ||
+      !unhealthyCaloriesEntered
+    ) {
+      return false;
+    }
+    $("#assessmentSubmitBtn").prop("disabled", false);
+  }
+</script>
