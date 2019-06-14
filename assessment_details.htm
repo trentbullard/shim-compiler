@@ -297,8 +297,10 @@
 <div class="feature-content">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="assessment-details-content">Your Latest Health Quality Assessment Responses</h2>
-<hr class="assessment-details-content" />
+      <div class="assessment-details-content" id="assessmentDetailsTitle">
+  <h2>Your Latest Health Quality Assessment Responses</h2>
+  <hr />
+</div>
 <div class="modal-backdrop">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -406,7 +408,6 @@
         name="moodRadios"
         id="moodGood"
         value="mood_good"
-        checked
         disabled
       />&#128512;
     </label>
@@ -437,13 +438,7 @@
   <div class="form-inline">
     <div class="form-group">
       <label for="activeHours">
-        <input
-          type="text"
-          class="form-control"
-          id="activeHoursTxt"
-          placeholder="3"
-          readonly
-        />
+        <input type="text" class="form-control" id="activeHoursTxt" readonly />
         hours
       </label>
     </div>
@@ -456,7 +451,6 @@
           type="text"
           class="form-control"
           id="healthyCaloriesTxt"
-          placeholder="1800"
           readonly
         />
         healthy calories
@@ -469,7 +463,6 @@
           type="text"
           class="form-control"
           id="unhealthyCaloriesTxt"
-          placeholder="600"
           readonly
         />
         unhealthy calories
@@ -478,6 +471,14 @@
   </div>
   <br />
   <button type="button" class="btn btn-primary" id="assessmentRequestBtn">
+    Request New HQA
+  </button>
+</div>
+
+<div id="assessmentDetailsUnfinishedForm" style="display: none;">
+  <h4>You must take an assessment</h4>
+  <hr />
+  <button type="button" class="btn btn-primary" id="assessmentRequestBtn2">
     Request New HQA
   </button>
 </div>
@@ -508,6 +509,18 @@
     $(".assessment-details-content").show();
   });
 
+  $("#assessmentCancelBtn").click(function() {
+    if (
+      !moodSelected ||
+      !activeHoursEntered ||
+      !healthyCaloriesEntered ||
+      !unhealthyCaloriesEntered
+    ) {
+      $(".assessment-details-content").hide();
+      $("#assessmentDetailsUnfinishedForm").show();
+    }
+  });
+
   $("#assessmentSubmitBtn").click(function() {
     $("html, body").css({
       overflow: "auto",
@@ -530,7 +543,8 @@
     }
   });
 
-  $("#assessmentRequestBtn").click(function() {
+  $("#assessmentRequestBtn, #assessmentRequestBtn2").click(function() {
+    console.log("yuuup");
     if (goodMoodSelected) {
       $("#modalMoodGood").prop("checked", true);
     } else if (neutralMoodSelected) {
@@ -538,7 +552,7 @@
     } else if (badMoodSelected) {
       $("#modalMoodBad").prop("checked", true);
     }
-    $(".assessment-details-content").hide();
+    $(".assessment-details-content, #assessmentDetailsUnfinishedForm").hide();
     $(".modal-backdrop").show();
     $("html, body").css({
       overflow: "hidden",
