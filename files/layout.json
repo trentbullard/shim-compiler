@@ -668,10 +668,87 @@
             "biometric_results_link_active": "current-selection"
           },
           "motivate_feature_center_content": {
-            "center_content_blah": {
+            "biometric_results_content": {
               "locals": {
-                "feature_content_title": "Biometric Results Overview"
-              }
+                "feature_content_title": "Your Latest Biometric Screening Results"
+              },
+              "highlight_cards": [
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Blood Pressure",
+                      "link_href": "biometric_results_overview.htm#blood-pressure"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/blood_pressure.png",
+                        "alt_text": "blood-pressure-scales",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Body Mass Index",
+                      "link_href": "biometric_results_overview.htm#bmi"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/bmi.png",
+                        "alt_text": "bmi-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Cholesterol",
+                      "link_href": "biometric_results_overview.htm#cholesterol"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/cholesterol.png",
+                        "alt_text": "average-calories-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Body Mass Index",
+                      "link_href": "biometric_results_overview.htm#bmi"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/bmi.png",
+                        "alt_text": "bmi-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                },
+                {
+                  "highlight_card": {
+                    "locals": {
+                      "title": "Cholesterol",
+                      "link_href": "biometric_results_overview.htm#cholesterol"
+                    },
+                    "highlight_card_image": {
+                      "locals": {
+                        "file": "files/images/cholesterol.png",
+                        "alt_text": "average-calories-scale",
+                        "class": "img-responsive"
+                      }
+                    }
+                  }
+                }
+              ]
             }
           }
         }
