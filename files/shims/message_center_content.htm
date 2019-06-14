@@ -62,13 +62,48 @@
             </tbody>
           </table>
         </div>
+
         <div role="tabpanel" class="tab-pane" id="new-pane">
-          new
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="subject" class="col-sm-2 control-label"
+                >Subject</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="subject" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="content" class="col-sm-2 control-label"
+                >Message</label
+              >
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="5" id="message"></textarea>
+              </div>
+            </div>
+            <div class="input-group pull-right">
+              <span
+                class="text-success"
+                id="messageSentLabel"
+                style="display: none;"
+              >
+                Message sent!
+              </span>
+              <button type="button" class="btn btn-link" id="messageResetBtn">
+                Reset
+              </button>
+              <button type="button" class="btn btn-primary" id="messageSendBtn">
+                Send <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
         </div>
+
         <div role="tabpanel" class="tab-pane" id="sent-pane">
           sent
         </div>
       </div>
+
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane" id="message1" hidden>
           <div class="panel panel-default">
@@ -131,6 +166,9 @@
 </div>
 
 <script>
+  var subjectEntered = false;
+  var messageEntered = false;
+
   $("#inbox tr").click(function() {
     var messages = ["#message1", "#message2", "#message3"];
     $(this).removeClass("success");
@@ -152,4 +190,51 @@
     $("#inbox tr").removeClass("info");
     $($(this).data("tab")).show();
   });
+
+  $("#subject, #message").change(function() {
+    console.log('$("#subject").val(): ', $("#subject").val());
+    if ($("#subject").val() !== "") {
+      subjectEntered = true;
+      updateSubmitButton();
+    } else {
+      subjectEntered = false;
+      updateSubmitButton();
+    }
+    console.log('$("#message").val(): ', $("#message").val());
+    if ($("#message").val() !== "") {
+      messageEntered = true;
+      updateSubmitButton();
+    } else {
+      messageEntered = false;
+      updateSubmitButton();
+    }
+  });
+
+  $("#messageResetBtn").click(function() {
+    $("#subject, #message").val("");
+  });
+
+  $("#messageSendBtn").click(function() {
+    $("#subject, #message").val("");
+    $("#messageSendBtn").prop("disabled", true);
+    $("#messageSentLabel")
+      .show()
+      .delay(3000)
+      .fadeOut({
+        duration: 1500,
+        easing: "easeOutSine"
+      });
+  });
+
+  $(function() {
+    $('[data-toggle="popover"]').popover();
+  });
+
+  function updateSubmitButton() {
+    if (subjectEntered && messageEntered) {
+      $("#messageSendBtn").prop("disabled", false);
+    } else {
+      $("#messageSendBtn").prop("disabled", true);
+    }
+  }
 </script>
